@@ -17,13 +17,13 @@ provider "aws" {
   region = "eu-north-1" # Use your AWS region here
 }
 
-resource "aws_s3_bucket" "my_bucket3" {
-  bucket = "sharminabuckets3testing3"
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "sharminabucketstesting"
 }
 
 
 
 output "bucket_name" {
-  value = aws_s3_bucket.my_bucket3.bucket
+  value = aws_s3_bucket.my_bucket.bucket
   
 }
