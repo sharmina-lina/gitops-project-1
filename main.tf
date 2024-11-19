@@ -21,9 +21,7 @@ resource "aws_s3_bucket" "my_bucket3" {
   bucket = "sharminabuckets3testing3"
 }
 
-resource "aws_s3_bucket" "my_bucket2" {
-  bucket = "sharminabuckets3testing2"
-}
+
 
 output "bucket_name" {
   value = aws_s3_bucket.my_bucket3.bucket
