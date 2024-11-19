@@ -26,6 +26,10 @@ jobs:
 
     - name: Terraform Plan
       run: terraform plan
+      env:
+        TF_VAR_aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}  # Add secrets to GitHub repository
+        TF_VAR_aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # Add secrets to GitHub repository
+        TF_VAR_region: "eu-north-1"  # AWS region
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
