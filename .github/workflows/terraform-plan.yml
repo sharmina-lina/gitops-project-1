@@ -38,7 +38,7 @@ jobs:
         #AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         #AWS_DEFAULT_REGION: "eu-north-1"  # Use your region
     - name: Terraform Destroy
-      run: terraform destroy -auto-approve
+      run: terraform destroy -target=aws_s3_bucket.sharminabuckets3testing -target=aws_s3_bucket.sharminabuckets3testing2 -target=aws_s3_bucket.sharminabuckets3testing3 -target=aws_s3_bucket.sharminabucketstesting -auto-approve
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
